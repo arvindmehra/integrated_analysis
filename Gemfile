@@ -2,6 +2,28 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
+ruby '2.1.0'
+
+
+gem 'chosen-rails'
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+gem 'bootstrap-datepicker-rails'
+
+gem "simple_form"
+gem 'paperclip'
+gem 'devise'
+gem 'omniauth'
+
+# Facebook Integration for posting feedbacks
+gem 'omniauth-facebook'
+gem 'koala'
+
+# Twitter Integration for posting feedbacks
+gem 'omniauth-twitter'
+gem 'twitter'
+gem 'twitter-text'
+
 
 # Use mysql2 as the database for Active Record
 gem 'mysql2'
@@ -26,6 +48,9 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+group :development do
+	gem 'byebug'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
