@@ -1,0 +1,10 @@
+<h3>project Information</h3>
+<%= form_for @properties  do |f|  %>
+  <%= f.label :project %><%= f.text_field :project %>
+  <%= f.label :area %><%= f.text_field :area %>
+  <%= f.label :city %><%= f.text_field :city %>
+  <%= f.label :price %><%= f.text_field :price %>
+  <%= f.label :sizes %><%= f.text_field :sizes %>
+  <%= f.label :contact %><%= f.text_field :contact %>
+  <%= f.submit "save", class: "btn btn-primary" %>
+ <%end%>
