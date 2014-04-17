@@ -7,9 +7,9 @@ class CreateProperties < ActiveRecord::Migration
       t.string :city
       t.datetime :posted_at
       t.string :price
-      t.float :sizes
+      t.float :size
       t.integer :to_do
-      t.integer :contact
+      t.string :contact
 
       t.timestamps
     end
