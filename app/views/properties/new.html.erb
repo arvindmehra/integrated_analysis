@@ -1,10 +1,36 @@
-<h3>project Information</h3>
-<%= form_for @properties  do |f|  %>
-  <%= f.label :project %><%= f.text_field :project %>
-  <%= f.label :area %><%= f.text_field :area %>
-  <%= f.label :city %><%= f.text_field :city %>
-  <%= f.label :price %><%= f.text_field :price %>
-  <%= f.label :sizes %><%= f.text_field :sizes %>
-  <%= f.label :contact %><%= f.text_field :contact %>
-  <%= f.submit "save", class: "btn btn-primary" %>
- <%end%>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="box">
+			<div class="box-header">
+				<h2><i class="icon-edit"></i>Submit Project Details</h2>
+				<div class="box-icon">
+					<a href="form-elements.html#" class="btn-setting"><i class="icon-wrench"></i></a>
+					<a href="form-elements.html#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+					<a href="form-elements.html#" class="btn-close"><i class="icon-remove"></i></a>
+				</div>
+			</div>
+			<div class="box-content">
+				<form class="form-horizontal">
+				  <fieldset class="col-sm-12">	
+						<div class="form-group">
+							<%= simple_form_for @properties  do |f|  %>
+							  <%= f.input :project %>
+							  <%= f.input :area %>
+							  <%= f.input :city %>
+							  <%= f.input :price %>
+							  <%= f.input :sizes %>
+							  <%= f.input :to_do %>
+							  <%= f.input :contact %>
+				        <div class='row'>
+				          <div class='col-md-offset-3'>
+				            <%= button_tag(type: 'submit', class: "btn btn-success") do %>
+				              <i class="icon-save icon-white"></i> Submit
+				            <% end %>
+				          </div>
+				        </div>
+							<% end %>
+						</div>
+					</fieldset>	
+				</form>
+			</div>
+
