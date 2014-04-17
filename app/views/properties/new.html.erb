@@ -11,14 +11,14 @@
 			</div>
 			<div class="box-content">
 				<form class="form-horizontal">
-				  <fieldset class="col-sm-12">	
+				  <fieldset class="col-sm-12">
 						<div class="form-group">
 							<%= simple_form_for @properties  do |f|  %>
 							  <%= f.input :project %>
 							  <%= f.input :area %>
 							  <%= f.input :city %>
 							  <%= f.input :price %>
-							  <%= f.input :sizes %>
+							  <%= f.input :size %>
 							  <%= f.input :to_do %>
 							  <%= f.input :contact %>
 				        <div class='row'>
@@ -30,7 +30,7 @@
 				        </div>
 							<% end %>
 						</div>
-					</fieldset>	
+					</fieldset>
 				</form>
 			</div>
 
