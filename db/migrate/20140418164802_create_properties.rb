@@ -10,6 +10,14 @@ class CreateProperties < ActiveRecord::Migration
       t.string :size
       t.integer :to_do
       t.string :contact
+      t.integer :professional_type
+      t.string :data_available
+      t.integer :amenities
+      t.text :comments
+      t.string :name
+      t.string :company
+      t.string :email
+      t.string :phone
 
       t.timestamps
     end

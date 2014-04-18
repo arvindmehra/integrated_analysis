@@ -15,8 +15,15 @@
   <%= f.input :city %>
   <%= f.input :price %>
   <%= f.input :size %>
-  <%= f.input :to_do %>
+  <%= f.input(:to_do, :collection => Property::TODO_TYPE, :include_blank => "Please Select TO-DO Type") %>
   <%= f.input :contact %>
+  <%= f.input :professional_type, :collection => Property::PROFESSIONAL_TYPE, :include_blank => "Please Select Professional Type" %>
+  <%= f.input :data_available %>
+  <%= f.input :amenities %>
+  <%= f.input :name %>
+  <%= f.input :company %>
+  <%= f.input :email %>
+  <%= f.input :phone %>
   <div class='row'>
     <div class='col-md-offset-3'>
       <%= button_tag(type: 'submit', class: "btn btn-success") do %>
