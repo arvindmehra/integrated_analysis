@@ -1,1 +1,49 @@
-<%= @property.project %> <%= @property.area %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @property.photo %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @property.project %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @property.area %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @property.city %>
+</p>
+
+<p>
+  <strong>Posted at:</strong>
+  <%= @property.posted_at %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @property.price %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @property.size %>
+</p>
+
+<p>
+  <strong>To do:</strong>
+  <%= @property.to_do %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @property.contact %>
+</p>
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>

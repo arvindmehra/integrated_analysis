@@ -5,19 +5,19 @@ one:
   project: MyText
   area: MyString
   city: MyString
-  posted_at: 2014-04-14 20:10:13
+  posted_at: 2014-04-18 22:18:02
   price: MyString
-  sizes: 1.5
+  size: MyString
   to_do: 1
-  contact: 1
+  contact: MyString
 
 two:
   photo: MyString
   project: MyText
   area: MyString
   city: MyString
-  posted_at: 2014-04-14 20:10:13
+  posted_at: 2014-04-18 22:18:02
   price: MyString
-  sizes: 1.5
+  size: MyString
   to_do: 1
-  contact: 1
+  contact: MyString

@@ -1,6 +1,5 @@
 class WelcomeController < ApplicationController
 
-  before_action :authenticate_user!
   layout 'new_layout', :only => [:login]
 
   def index
