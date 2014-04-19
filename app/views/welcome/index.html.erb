@@ -37,32 +37,26 @@
 				      <th>Project</th>
 				      <th>Area</th>
 				      <th>City</th>
-				      <th>Posted at</th>
-				      <th>Price</th>
-				      <th>Size</th>
-				      <th>To do</th>
+				      <th>Posted</th>
+				      <th>Price<span class="text-muted"> (Rs)</span></th>
+				      <th>Size<span class="text-muted"> (sqrt)</span></th>
+				      <th>For sale/buy/rent</th>
 				      <th>Contact</th>
-				      <th></th>
-				      <th></th>
-				      <th></th>
 					  </tr>
 				  </thead>
 				  <tbody>
 				    <% @properties.each do |property| %>
 				      <tr>
 				      	<td><%= property.id %></td>
-				        <td><%= property.photo %></td>
+				        <td><img src="/photo10.jpg" style="height: 23px; width: 23px;"> x 3</td>
 				        <td><%= property.project %></td>
 				        <td><%= property.area %></td>
 				        <td><%= property.city %></td>
-				        <td><%= property.posted_at %></td>
+				        <td><%= property.created_at.to_s(:short) %></td>
 				        <td><%= property.price %></td>
 				        <td><%= property.size %></td>
-				        <td><%= property.to_do %></td>
+				        <td><span class="label label-primary"><%= Property::TODO_TYPE.keys[property.to_do] %></span></td>
 				        <td><%= property.contact %></td>
-				        <td><%= link_to 'Show', property %></td>
-				        <td><%= link_to 'Edit', edit_property_path(property) %></td>
-				        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 				      </tr>
 				    <% end %>
 				  </tbody>
