@@ -9,4 +9,8 @@ class WelcomeController < ApplicationController
   def login
   end
 
+  def search
+  	redirected_to welcome_search_path
+  end
+
 end
