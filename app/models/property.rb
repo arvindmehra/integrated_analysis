@@ -15,4 +15,6 @@ class Property < ActiveRecord::Base
 
   BUILDING_AMENITIES = ["Parking garage","Lobby attendant","Gym","Common kitchen","Common bike storage","Common showers","Onsite parking","Bikes allowed","Dog friendly","Common bathrooms","Onsite security guard"]
 
+  self.per_page = 10
+
 end

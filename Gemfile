@@ -24,6 +24,10 @@ gem 'omniauth-twitter'
 gem 'twitter'
 gem 'twitter-text'
 
+#will_paginate
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
+
 
 # Use mysql2 as the database for Active Record
 gem 'mysql2'

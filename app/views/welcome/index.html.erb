@@ -55,12 +55,13 @@
 				        <td><%= property.created_at.to_s(:short) %></td>
 				        <td><%= property.price %></td>
 				        <td><%= property.size %></td>
-				        <td><span class="label label-primary"><%= Property::TODO_TYPE.keys[property.to_do] %></span></td>
+				        <td><span class="label label-primary"><%= Property::TODO_TYPE.keys[property.to_do] if  property.to_do %></span></td>
 				        <td><%= property.contact %></td>
 				      </tr>
 				    <% end %>
 				  </tbody>
 			  </table>
+			  <%= will_paginate @properties, renderer: BootstrapPagination::Rails %>
 			</div>
 		</div>
 	</div><!--/col-->
