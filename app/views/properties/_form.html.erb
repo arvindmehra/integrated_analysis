@@ -26,64 +26,103 @@
             </div>
           <% end %>
           <fieldset>
-            <div class="col-sm-3">
-              <div class="box">
-                <div class="lead">
-                  <i class="icon-github text-contrast"></i>
-                  Project Detail
-                </div>
+            <div class="col-sm-2">
+              <div class="lead text-muted">
+                <i class="icon-github text-muted"></i>
+                Project Detail
               </div>
             </div>
-            <div class="col-sm-9">
+            <div class="col-sm-5">
               <%= f.input :project %>
-              <%= f.input :area %>
               <%= f.input :city %>
-              <%= f.input :size %>
-              <%= f.input(:to_do, :collection => Property::TODO_TYPE, :include_blank => "Please Select TO-DO Type") %>
+              <div class="col-sm-2"><%= f.label :size %></div>
+              <div class="input-group col-sm-10" style="margin-left: -10px;">
+                <%= f.text_field :size, :class => "form-control" %>
+                <span class="input-group-addon">sqrt</span>
+              </div>
+              <div style="margin-top: 60px;"></div>
               <%= f.input :contact %>
+            </div>
+            <div class="col-sm-5">
+              <%= f.input :area %>
+              <%= f.input :floor %>
+              <%= f.input(:to_do, :collection => Property::TODO_TYPE) %>
             </div>
           </fieldset>
           <hr class="hr-normal">
           <fieldset>
-            <div class="col-sm-3">
-              <div class="box">
-                <div class="lead">
-                  <i class="icon-money text-contrast"></i>
-                  Pricing Detail
-                </div>
+            <div class="col-sm-2">
+              <div class="lead text-muted">
+                <i class="icon-money text-contrast"></i>
+                Pricing Detail
               </div>
             </div>
-            <div class="col-sm-9">
-              <%= f.input :price %>
-              <%= f.input :professional_type, :collection => Property::PROFESSIONAL_TYPE, :include_blank => "Please Select Professional Type" %>
+            <div class="col-sm-10">
+              <div class="col-sm-2"><%= f.label :price %></div>
+              <div class="input-group color col-sm-10" style="margin-left: -12px;">
+                <span class="input-group-addon">Rs</span>
+                <%= f.text_field :price, :class => "form-control" %>
+                <span class="input-group-addon">lacs</span>
+              </div>
+              <div style="margin-top: 50px;"></div>
+              <%= f.input :professional_type, :collection => Property::PROFESSIONAL_TYPE %>
               <%= f.input :data_available %>
             </div>
           </fieldset>
           <hr class="hr-normal">
           <fieldset>
-            <div class="col-sm-3">
-              <div class="box">
-                <div class="lead">
-                  <i class="icon-comment text-contrast"></i>
-                  Comments
-                </div>
+            <div class="col-sm-4">
+              <div class="lead text-muted">
+                <i class="icon-money text-contrast"></i>
+                Amenities
               </div>
             </div>
-            <div class="col-sm-9">
+            <div class="col-sm-4">
+              <label class="control-label">Listing amenities</label>
+              <div class="controls">
+                <%= hidden_field_tag "listing_amenities[]", nil %>
+                <% Property::LISTING_AMENITIES.each_with_index do |l,n| %>
+                  <label class = "checkbox inline">
+                    <%= check_box_tag "listing_amenities[]", n+1, :id => "listing_amenties_#{n+1}" %>
+                    <%= label_tag "listing_amenties_#{n+1}",l, :class => "control-label label-class" %>
+                  </label>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <label class="control-label">Building amenities</label>
+              <div class="controls">
+                <%= hidden_field_tag "listing_amenities[]", nil %>
+                <% Property::BUILDING_AMENITIES.each_with_index do |l,n| %>
+                  <label class = "checkbox inline">
+                    <%= check_box_tag "listing_amenities[]", n+1, :id => "listing_amenties_#{n+1}" %>
+                    <%= label_tag "listing_amenties_#{n+1}",l, :class => "control-label label-class" %>
+                  </label>
+                <% end %>
+              </div>
+            </div>
+          </fieldset>
+          <hr class="hr-normal">
+          <fieldset>
+            <div class="col-sm-2">
+              <div class="lead text-muted">
+                <i class="icon-comment text-contrast"></i>
+                Comments
+              </div>
+            </div>
+            <div class="col-sm-10">
               <%= f.input :comments, :rows => "7", :cols=> "11" %>
             </div>
           </fieldset>
           <hr class="hr-normal">
           <fieldset>
-            <div class="col-sm-3">
-              <div class="box">
-                <div class="lead">
-                  <i class="icon-comment text-contrast"></i>
-                  Main Contact
-                </div>
+            <div class="col-sm-2">
+              <div class="lead text-muted">
+                <i class="icon-comment text-contrast"></i>
+                Main Contact
               </div>
             </div>
-            <div class="col-sm-9">
+            <div class="col-sm-10">
               <%= f.input :name %>
               <%= f.input :company %>
               <%= f.input :email %>
@@ -92,7 +131,7 @@
           </fieldset>
           <div class="form-actions">
             <div class="row">
-              <div class="col-sm-7 col-sm-offset-5">
+              <div class="col-sm-7 col-sm-offset-4">
                 <%= button_tag(type: 'submit', class: "btn btn-success btn-lg") do %>
                   <i class="icon-save icon-white"></i> Submit Listing
                 <% end %>

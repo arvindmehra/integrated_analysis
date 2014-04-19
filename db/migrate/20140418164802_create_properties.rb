@@ -4,6 +4,7 @@ class CreateProperties < ActiveRecord::Migration
       t.string :photo
       t.text :project
       t.string :area
+      t.integer :floor
       t.string :city
       t.datetime :posted_at
       t.string :price

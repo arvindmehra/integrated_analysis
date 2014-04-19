@@ -68,7 +68,7 @@ SimpleForm.setup do |config|
     b.wrapper tag: :label, :class => 'col-md-2 control-label' do |labelclass|
       labelclass.use :label_text
     end
-    b.wrapper :tag => 'div', :class => 'col-md-5' do |ba|
+    b.wrapper :tag => 'div', :class => 'col-md-10' do |ba|
       ba.use :input
       ba.use :hint, wrap_with: { tag: :span, class: "help-block" }
       ba.use :error, wrap_with: { tag: :span, class: "help-block text-danger" }
@@ -92,7 +92,7 @@ SimpleForm.setup do |config|
     b.wrapper tag: :label, :class => 'col-md-2 control-label' do |labelclass|
       labelclass.use :label_text
     end
-    b.wrapper :tag => 'div', :class => 'col-md-5' do |ba|
+    b.wrapper :tag => 'div', :class => 'col-md-10' do |ba|
       ba.use :input
       ba.use :hint, wrap_with: { tag: :span, class: "help-block" }
       ba.use :error, wrap_with: { tag: :span, class: "help-block text-danger" }
