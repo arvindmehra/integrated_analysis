@@ -10,4 +10,9 @@ class Property < ActiveRecord::Base
     "Ready to move" => "0",
     "Under Construction" => "1",
   }
+
+  LISTING_AMENITIES = ["Kitchen","Showers","Patio","Reception","Ready to move in","Furniture","Natural light","High ceilings"]
+
+  BUILDING_AMENITIES = ["Parking garage","Lobby attendant","Gym","Common kitchen","Common bike storage","Common showers","Onsite parking","Bikes allowed","Dog friendly","Common bathrooms","Onsite security guard"]
+
 end

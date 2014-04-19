@@ -12,7 +12,8 @@ class CreateProperties < ActiveRecord::Migration
       t.string :contact
       t.integer :professional_type
       t.string :data_available
-      t.integer :amenities
+      t.integer :listing_amenities
+      t.integer :building_amenities
       t.text :comments
       t.string :name
       t.string :company
