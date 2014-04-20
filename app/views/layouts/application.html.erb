@@ -67,7 +67,7 @@
               <li><a href="index.html#"><i class="icon-user"></i> Profile</a></li>
               <li><a href="index.html#"><i class="icon-cog"></i> Settings</a></li>
               <li><a href="index.html#"><i class="icon-envelope"></i> Messages</a></li>
-              <li><a href="login.html"><i class="icon-off"></i> Logout</a></li>
+              <li><%= link_to "<i class='icon-off'></i> Sign Out </span>".html_safe, destroy_user_session_path, :method => "delete" %></li>
             </ul>
           </li>
           <!-- end: User Dropdown -->
@@ -89,8 +89,6 @@
           <ul class="nav nav-tabs nav-stacked main-menu">
             <li><%= link_to "<i class='icon-bar-chart'></i><span class='hidden-sm'> Dashboard</span>".html_safe, root_path  %></li>
             <li><a href="/properties/new"><i class="icon-user"></i><span class="hidden-sm"> New Properties </span></a></li>
-            <li><%= link_to "<i class='icon-lock'></i><span class='hidden-sm'> Login </span>".html_safe, '/welcome/login' %></li>
-            <li><%= link_to "<i class='icon-lock'></i><span class='hidden-sm'> Sign Out </span>".html_safe, destroy_user_session_path, :method => "delete" %></li>
           </ul>
         </div>
       </div>
