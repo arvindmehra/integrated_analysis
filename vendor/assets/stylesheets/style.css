@@ -1,7 +1,7 @@
 /*
 * Author: Łukasz Holeczek
 * Template: SimpliQ - Flat & Responsive Bootstrap Admin Template
-* Version: 2.1.0 
+* Version: 2.1.0
 * Bootstrap version: 3.0.0
 * Copyright 2013 creativeLabs
 * www: http://bootstrapmaster.com
@@ -814,12 +814,12 @@ a#main-menu-toggle {
 }
 /* Forms
 =================================================================== */
-input[placeholder],
+/*input[placeholder],
 [placeholder],
 *[placeholder] {
   color: white !important;
-}
-input:-moz-placeholder,
+}*/
+/*input:-moz-placeholder,
 textarea:-moz-placeholder {
   color: white;
 }
@@ -830,7 +830,7 @@ textarea:-ms-input-placeholder {
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: white;
-}
+}*/
 .add-on,
 textarea,
 input[type="text"],
@@ -4569,7 +4569,7 @@ ul.messagesList li span.date {
 /*
 * Author: Łukasz Holeczek
 * Template: SimpliQ - Flat & Responsive Bootstrap Admin Template
-* Version: 1.0.2 
+* Version: 1.0.2
 * Bootstrap version: 2.3.2
 * Copyright 2013 creativeLabs
 * www: http://bootstrapmaster.com
