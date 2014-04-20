@@ -46,7 +46,7 @@
             <div class="col-sm-5">
               <%= f.input :area %>
               <%= f.input :floor %>
-              <%= f.input(:to_do, :collection => Property::TODO_TYPE) %>
+              <%= f.input(:to_do, :collection => Property::TODO_TYPE, :include_blank => false) %>
             </div>
           </fieldset>
           <hr class="hr-normal">
@@ -65,7 +65,7 @@
                 <span class="input-group-addon">lacs</span>
               </div>
               <div style="margin-top: 50px;"></div>
-              <%= f.input :professional_type, :collection => Property::PROFESSIONAL_TYPE %>
+              <%= f.input :professional_type, :collection => Property::PROFESSIONAL_TYPE, :include_blank => false %>
               <%= f.input :data_available %>
             </div>
           </fieldset>
