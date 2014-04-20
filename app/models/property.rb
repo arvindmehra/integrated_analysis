@@ -28,7 +28,6 @@ class Property < ActiveRecord::Base
     lc[:to_do] =[]
     scope = Property.all
     if search && !search[:min_sqrt].blank? && !search[:max_sqrt].blank?
-    	debugger
       scope = scope.where{|x| x.size >= search[:min_sqrt] && x.size <= search[:max_sqrt]}
       scope = scope.instance_values.values.last
     end
