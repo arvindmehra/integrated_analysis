@@ -70,7 +70,7 @@
 				    <% end %>
 				  </tbody>
 			  </table>
-			  <%= will_paginate @properties, renderer: BootstrapPagination::Rails %>
+			  <%= will_paginate @properties, renderer: BootstrapPagination::Rails  unless params[:search].present? %>
 			</div>
 		</div>
 	</div><!--/col-->
