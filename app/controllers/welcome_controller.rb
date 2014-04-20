@@ -4,6 +4,7 @@ class WelcomeController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @user = current_user
     if params[:search].present?
       params[:search][:min_sqrt]||= ""
       params[:search][:max_sqrt]||= ""
