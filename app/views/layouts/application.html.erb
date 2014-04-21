@@ -25,7 +25,7 @@
     <div class="navbar-inner">
       <div class="container-fluid">
         <%= collapser %>
-        <%= link_to("Integrated Analysis","#",:class => "navbar-brand") %>
+        <%= link_to("Integrated Analysis",root_path,:class => "navbar-brand") %>
         <div class="navbar-collapse collapse pull-right">
           <ul class="nav navbar-nav">
             <li class="dropdown">
@@ -42,10 +42,6 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">
-        <div class="navbar">
-          <div class="navbar-inner">
-          </div>
-        </div>
         <%= yield %>
       </div>
     </div>
