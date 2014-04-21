@@ -4,7 +4,7 @@ class PropertiesController < ApplicationController
   # GET /properties
   # GET /properties.json
   def index
-    @properties = Property.all
+    @properties = current_user.properties 
   end
 
   # GET /properties/1
@@ -24,7 +24,7 @@ class PropertiesController < ApplicationController
   # POST /properties
   # POST /properties.json
   def create
-    @property = Property.new(property_params)
+    @property = current_user.properties.build(property_params)
 
     respond_to do |format|
       if @property.save
