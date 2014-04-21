@@ -1,2 +1,11 @@
 @import "bootstrap";
 @import "font-awesome";
+
+$brand-color: pink;
+
+.navbar-fixed-top a.navbar-brand {
+  color: $brand-color;
+  &:hover {
+    color: darken($brand-color,20%);
+  }
+}
