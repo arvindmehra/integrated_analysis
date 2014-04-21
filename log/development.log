@@ -13,3 +13,451 @@ Migrating to CreateProperties (20140414144013)
   [1m[35mSQL (23.9ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140414144013')
   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.default_input_size= is deprecated and has no effect. (called from block in <top (required)> at /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/config/initializers/simple_form.rb:212)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `properties`[0m
+  [1m[35mProperty Load (0.6ms)[0m  SELECT `properties`.* FROM `properties` LIMIT 10 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `properties`[0m
+  Rendered welcome/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 139ms (Views: 106.6ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/uncompressed/core.js?body=1" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/jquery-ui-1.10.3.custom.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/fullcalendar.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/jquery.cleditor.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/noty_theme_default.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/chosen.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/jquery.noty.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/elfinder.min.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/elfinder.theme.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/uploadify.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/jquery.gritter.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/font-awesome.min.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/font-awesome-ie7.min.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/glyphicons.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/halflings.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/dropzone.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/xcharts.min.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/assets/jquery.easy-pie-chart.css" for 127.0.0.1 at 2014-04-20 18:41:46 +0530
+
+
+Started GET "/welcome/index?page=2" for 127.0.0.1 at 2014-04-20 18:41:51 +0530
+Processing by WelcomeController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `properties`[0m
+  [1m[35mProperty Load (0.3ms)[0m  SELECT `properties`.* FROM `properties` LIMIT 10 OFFSET 10
+  Rendered welcome/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/welcome/avatar.jpg" for 127.0.0.1 at 2014-04-20 18:41:51 +0530
+
+ActionController::RoutingError (No route matches [GET] "/welcome/avatar.jpg"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/amitsuroliya/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/amitsuroliya/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/amitsuroliya/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.5ms)
+  Rendered /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (48.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-20 18:41:51 +0530
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-20 18:41:51 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-20 18:41:51 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-20 18:41:51 +0530
+
+
+Started GET "/assets/uncompressed/core.js?body=1" for 127.0.0.1 at 2014-04-20 18:41:51 +0530
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-04-20 18:41:51 +0530
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2014-04-20 18:41:51 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-20 18:41:51 +0530
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.default_input_size= is deprecated and has no effect. (called from block in <top (required)> at /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/config/initializers/simple_form.rb:212)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-21 21:47:06 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (8.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 21ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-04-21 21:47:06 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/shared/_links.erb (2.1ms)
+  Rendered users/sessions/new.html.erb within layouts/new_layout (67.3ms)
+Completed 200 OK in 210ms (Views: 162.3ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-21 21:47:06 +0530
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-04-21 21:47:19 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yekxi52p8egIGbZIk7K6mlEm7gVfFC+x4tkNbrKKiGw=", "user"=>{"email"=>"amitkumarsuroliya@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (24.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'amitkumarsuroliya@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (26.3ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2014-04-20 12:25:44', `current_sign_in_at` = '2014-04-21 16:17:19', `sign_in_count` = 5, `updated_at` = '2014-04-21 16:17:19' WHERE `users`.`id` = 3
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 157ms (ActiveRecord: 51.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-21 21:47:19 +0530
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM `properties`[0m
+  [1m[35mProperty Load (0.4ms)[0m  SELECT `properties`.* FROM `properties` LIMIT 10 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `properties`[0m
+  Rendered welcome/index.html.erb within layouts/application (48.3ms)
+Completed 500 Internal Server Error in 161ms
+
+ActionView::Template::Error (undefined local variable or method `collapser' for #<#<Class:0x007fbd6a20dc38>:0x007fbd6a20cea0>):
+    24:   <div class="navbar navbar-inverse navbar-fixed-top">
+    25:     <div class="navbar-inner">
+    26:       <div class="container">
+    27:         <%= collapser %>
+    28:         <%= link_to("Integrated Analysis","#",:class => "brand") %>
+    29:         <div class="nav-collapse collapse">
+    30:           <p class="navbar-text pull-right">
+  app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb__3139516102091137270_70225753057340'
+
+
+  Rendered /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-21 21:47:44 +0530
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `properties`[0m
+  [1m[35mProperty Load (0.4ms)[0m  SELECT `properties`.* FROM `properties` LIMIT 10 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `properties`[0m
+  Rendered welcome/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-21 21:47:44 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-21 21:47:44 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-21 21:47:44 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-21 21:47:44 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-21 21:47:44 +0530
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-04-21 21:47:44 +0530
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2014-04-21 21:47:44 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-21 21:52:39 +0530
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `properties`[0m
+  [1m[35mProperty Load (0.3ms)[0m  SELECT `properties`.* FROM `properties` LIMIT 10 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `properties`[0m
+  Rendered welcome/index.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 101ms
+
+ActionView::Template::Error (File to import not found or unreadable: bootstrap_and_overrides.
+Load paths:
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/app/assets/images
+  /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/app/assets/javascripts
+  /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/app/assets/stylesheets
+  /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/vendor/assets/javascripts
+  /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/vendor/assets/stylesheets
+  /Users/amitsuroliya/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/turbolinks-2.2.2/lib/assets/javascripts
+  /Users/amitsuroliya/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/jquery-rails-3.1.0/vendor/assets/javascripts
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  /Users/amitsuroliya/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/bootstrap-datepicker-rails-1.3.0.2/vendor/assets/javascripts
+  /Users/amitsuroliya/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/bootstrap-datepicker-rails-1.3.0.2/vendor/assets/stylesheets
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/font-awesome-rails-4.0.3.1/app/assets/fonts
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/font-awesome-rails-4.0.3.1/app/assets/stylesheets
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/bootstrap-sass-3.1.1.0/vendor/assets/fonts
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/bootstrap-sass-3.1.1.0/vendor/assets/javascripts
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/bootstrap-sass-3.1.1.0/vendor/assets/stylesheets
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/chosen-rails-1.1.0/vendor/assets/images
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/chosen-rails-1.1.0/vendor/assets/javascripts
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/chosen-rails-1.1.0/vendor/assets/stylesheets
+  /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/vendor/assets/fonts
+  /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/app/assets/stylesheets
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/compass-0.12.5/frameworks/blueprint/stylesheets
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/compass-0.12.5/frameworks/compass/stylesheets
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/bootstrap-sass-3.1.1.0/vendor/assets/stylesheets
+  Compass::SpriteImporter
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/bootstrap-sass-3.1.1.0/vendor/assets/stylesheets
+  (in /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/app/assets/stylesheets/application.css.scss:1)):
+    10:   <!-- end: Mobile Specific -->
+    11: 
+    12:   <!-- start: CSS -->
+    13:   <%= stylesheet_link_tag 'application', media: "all" %>
+    14:   <%= javascript_include_tag "application" %>
+    15:   <!-- end: CSS -->
+    16:   <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+  app/assets/stylesheets/application.css.scss:1
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__3139516102091137270_70225787353680'
+
+
+  Rendered /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-21 21:55:14 +0530
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `properties`[0m
+  [1m[35mProperty Load (0.5ms)[0m  SELECT `properties`.* FROM `properties` LIMIT 10 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `properties`[0m
+  Rendered welcome/index.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 1310ms
+
+ActionView::Template::Error (File to import not found or unreadable: simple_form.
+Load paths:
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  CompassRails::SpriteImporter
+  /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/app/assets/images
+  /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/app/assets/javascripts
+  /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/app/assets/stylesheets
+  /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/vendor/assets/javascripts
+  /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/vendor/assets/stylesheets
+  /Users/amitsuroliya/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/turbolinks-2.2.2/lib/assets/javascripts
+  /Users/amitsuroliya/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/jquery-rails-3.1.0/vendor/assets/javascripts
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  /Users/amitsuroliya/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/bootstrap-datepicker-rails-1.3.0.2/vendor/assets/javascripts
+  /Users/amitsuroliya/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/bootstrap-datepicker-rails-1.3.0.2/vendor/assets/stylesheets
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/font-awesome-rails-4.0.3.1/app/assets/fonts
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/font-awesome-rails-4.0.3.1/app/assets/stylesheets
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/bootstrap-sass-3.1.1.0/vendor/assets/fonts
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/bootstrap-sass-3.1.1.0/vendor/assets/javascripts
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/bootstrap-sass-3.1.1.0/vendor/assets/stylesheets
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/chosen-rails-1.1.0/vendor/assets/images
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/chosen-rails-1.1.0/vendor/assets/javascripts
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/chosen-rails-1.1.0/vendor/assets/stylesheets
+  /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/vendor/assets/fonts
+  /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/app/assets/stylesheets
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/compass-0.12.5/frameworks/blueprint/stylesheets
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/compass-0.12.5/frameworks/compass/stylesheets
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/bootstrap-sass-3.1.1.0/vendor/assets/stylesheets
+  Compass::SpriteImporter
+  /Users/amitsuroliya/.rvm/gems/ruby-2.1.0/gems/bootstrap-sass-3.1.1.0/vendor/assets/stylesheets
+  (in /Users/amitsuroliya/Documents/rails_projects/freelancer/integrated_analysis/app/assets/stylesheets/application.css.scss:3)):
+    10:   <!-- end: Mobile Specific -->
+    11: 
+    12:   <!-- start: CSS -->
+    13:   <%= stylesheet_link_tag 'application', media: "all" %>
+    14:   <%= javascript_include_tag "application" %>
+    15:   <!-- end: CSS -->
+    16:   <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+  app/assets/stylesheets/application.css.scss:3
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__3139516102091137270_70225787353680'
+
+
+  Rendered /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/amitsuroliya/.rvm/gems/ruby-2.1.0@global/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-21 21:55:26 +0530
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `properties`[0m
+  [1m[35mProperty Load (0.3ms)[0m  SELECT `properties`.* FROM `properties` LIMIT 10 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `properties`[0m
+  Rendered welcome/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 850ms (Views: 847.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-21 21:55:27 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-21 21:55:27 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-21 21:55:27 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-21 21:55:27 +0530
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2014-04-21 21:55:27 +0530
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-04-21 21:55:27 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-21 21:55:27 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-21 21:55:55 +0530
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `properties`[0m
+  [1m[35mProperty Load (0.3ms)[0m  SELECT `properties`.* FROM `properties` LIMIT 10 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `properties`[0m
+  Rendered welcome/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-21 21:55:55 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-21 21:55:55 +0530
+
+
+Started GET "/assets/properties.js?body=1" for 127.0.0.1 at 2014-04-21 21:55:55 +0530
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-04-21 21:55:55 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-21 21:55:55 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-21 21:55:55 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-21 21:55:55 +0530
