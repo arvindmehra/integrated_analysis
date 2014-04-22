@@ -6,7 +6,6 @@ class Devise::SessionsController < DeviseController
   prepend_before_filter :verify_user, only: [:destroy]
   skip_before_filter :verify_authenticity_token, only: [:destroy]
 
-  layout :resolve_layout
 
   # GET /resource/sign_in
   def new

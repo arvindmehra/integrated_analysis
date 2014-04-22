@@ -7,7 +7,7 @@
 		    <div class="clearfix"></div>
 		    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
 		    <div class="clearfix"></div>
-		    <%= f.button :submit, "Sign in", :class=>"btn btn-primary col-xs-12" %>
+		    <%= f.button :submit, "Sign in", :class=>"btn btn-primary" %>
 		  </fieldset>
 		<% end %>
 		<%= render "users/shared/links" %>
