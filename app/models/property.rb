@@ -1,8 +1,9 @@
 class Property < ActiveRecord::Base
 
-	scope :size_between,lambda {|from,to| {:conditions => ["Property.size between ? and ?",from,to]}}
-	scope :price_between,lambda {|from,to| {:conditions => ["price between ? and ?",from,to]}}
-	TODO_TYPE = {
+  belongs_to :user
+  scope :size_between,lambda {|from,to| {:conditions => ["Property.size between ? and ?",from,to]}}
+  scope :price_between,lambda {|from,to| {:conditions => ["price between ? and ?",from,to]}}
+  TODO_TYPE = {
     "Rent" => "0",
     "Sale" => "1",
     "Purchase" => "2"
