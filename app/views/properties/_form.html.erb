@@ -62,7 +62,13 @@
               <div class="input-group color col-sm-10" style="margin-left: -12px;">
                 <span class="input-group-addon">Rs</span>
                 <%= f.text_field :price, :class => "form-control" %>
-                <span class="input-group-addon">lacs</span>
+                <span class="input-group-addon">
+                  <select name="listing_email[rate_units]" id="listing_email_rate_units">
+                    <option value="Lac">Lacs</option>
+                    <option value="Crores">Crores</option>
+                    <option value="Thousand">per month (if rent)</option>
+                  </select>
+                </span>
               </div>
               <div style="margin-top: 50px;"></div>
               <%= f.input :professional_type, :collection => Property::PROFESSIONAL_TYPE, :include_blank => false %>
