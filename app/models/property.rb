@@ -18,6 +18,12 @@ class Property < ActiveRecord::Base
 
   BUILDING_AMENITIES = ["Rain Water Harvesting","Club House","Covered Parking","Vastu","Tiled Flooring","Terrace","Servant Quarters","Intercom","Jacuzzi","Basement","Sauna","Air Conditioned"]
 
+  PRICING_TEXT = {
+    "Lacs" => "0",
+    "Crores" => "1",
+    "per month (if rent)" => "2"
+  }
+
   self.per_page = 10
 
   def self.search_data(search)

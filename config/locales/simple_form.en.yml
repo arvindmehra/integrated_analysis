@@ -27,4 +27,5 @@ en:
       property:
         to_do: Type
         project: Property
+        comment_title: Title
 

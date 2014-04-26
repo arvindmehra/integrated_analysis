@@ -63,11 +63,7 @@
                 <span class="input-group-addon">Rs</span>
                 <%= f.text_field :price, :class => "form-control" %>
                 <span class="input-group-addon">
-                  <select name="listing_email[rate_units]" id="listing_email_rate_units">
-                    <option value="Lac">Lacs</option>
-                    <option value="Crores">Crores</option>
-                    <option value="Thousand">per month (if rent)</option>
-                  </select>
+                  <%= f.input_field(:price_text, :collection => Property::PRICING_TEXT, :include_blank => false) %>
                 </span>
               </div>
               <div style="margin-top: 50px;"></div>
@@ -117,6 +113,7 @@
               </div>
             </div>
             <div class="col-sm-10">
+              <%= f.input :comment_title %>
               <%= f.input :comments, :rows => "7", :cols=> "11" %>
             </div>
           </fieldset>
