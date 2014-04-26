@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="box-content">
-        <%= simple_form_for @property  do |f|  %>
+        <%= simple_form_for(@property,:html => {:style => "border: 1px solid #D9D9D9; padding: 30px;"})  do |f|  %>
           <% if @property.errors.any? %>
             <div id="error_explanation">
               <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>

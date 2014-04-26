@@ -20,9 +20,12 @@ $brand-color: pink;
 	background-color: #000000 !important;
   color: #0088CC !important;
 }
-
 .popup_login {
   padding:0 17px 17px 17px;
   width:400px;
-  color:#000; 
+  color:#000;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+  background-color: #000000 !important;
+  color: #0088CC !important;
 }

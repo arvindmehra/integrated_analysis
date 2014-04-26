@@ -21,6 +21,7 @@ class Devise::SessionsController < DeviseController
     sign_in(resource_name, resource)
     resource.exclude_root = 1 if resource.respond_to?(:exclude_root)
     resource.current_punchh_app = punchh_app if resource.respond_to?(:current_punchh_app) && punchh_app
+    flash[:notice] = "succefully Login."
     respond_with resource, :location => after_sign_in_path_for(resource)
   end
 

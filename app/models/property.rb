@@ -14,9 +14,9 @@ class Property < ActiveRecord::Base
     "Under Construction" => "1",
   }
 
-  LISTING_AMENITIES = ["Kitchen","Showers","Patio","Reception","Ready to move in","Furniture","Natural light","High ceilings"]
+  LISTING_AMENITIES = ["Parking","Garden","Gym","Lift","Power Backup","Swimming Pool","Security","Balcony"]
 
-  BUILDING_AMENITIES = ["Parking garage","Lobby attendant","Gym","Common kitchen","Common bike storage","Common showers","Onsite parking","Bikes allowed","Dog friendly","Common bathrooms","Onsite security guard"]
+  BUILDING_AMENITIES = ["Rain Water Harvesting","Club House","Covered Parking","Vastu","Tiled Flooring","Terrace","Servant Quarters","Intercom","Jacuzzi","Basement","Sauna","Air Conditioned"]
 
   self.per_page = 10
 
