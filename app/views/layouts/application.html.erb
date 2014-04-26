@@ -27,20 +27,22 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <select name="property[city]" id="property_city" class="select optional" style="margin-top: 15px; color: black;">
-          <option value="0">Gurgaon</option>
-          <option value="1">Mumbai</option>
-          <option value="2">Bangalore</option>
-          <option value="3">Chennai</option>
-          <option value="4">Hyderabad</option>
-          <option value="5">Pune</option>
-          <option value="6">Kolkata</option>
-          <option value="7">Jaipur</option>
-          <option value="8">Goa</option>
-          <option value="9">Lucknow</option>
-          <option value="10">Ahemdabad</option>
-          <option value="11">Surat</option>
-        </select>
+        <li><%= link_to("Gurgaon","#",:style => "float: left;font-size: 14px;height: 50px;line-height: 20px;padding: 15px;") %></li>
+        <li><%= link_to("Mumbai","#",:style => "float: left;font-size: 14px;height: 50px;line-height: 20px;padding: 15px;") %></li>
+        <li><%= link_to("Bangalore","#",:style => "float: left;font-size: 14px;height: 50px;line-height: 20px;padding: 15px;") %></li>
+        <li><%= link_to("Chennai","#",:style => "float: left;font-size: 14px;height: 50px;line-height: 20px;padding: 15px;") %></li>
+        <li><%= link_to("Hyderabad","#",:style => "float: left;font-size: 14px;height: 50px;line-height: 20px;padding: 15px;") %></li>
+        <li><%= link_to("Pune","#",:style => "float: left;font-size: 14px;height: 50px;line-height: 20px;padding: 15px;") %></li>
+        <li><%= link_to("Kolkata","#",:style => "float: left;font-size: 14px;height: 50px;line-height: 20px;padding: 15px;") %></li>
+        <li class="dropdown">
+          <%= link_to("More <b class='caret'></b>".html_safe, "#", :class=> "dropdown-toggle", :'data-toggle' => "dropdown") %>
+          <ul class="dropdown-menu">
+            <li><%= link_to("Jaipur","#",:style => "float: left;font-size: 14px;height: 50px;line-height: 20px;padding: 15px;") %></li>
+            <li><%= link_to("Goa","#",:style => "float: left;font-size: 14px;height: 50px;line-height: 20px;padding: 15px;") %></li>
+            <li><%= link_to("Lucknow","#",:style => "float: left;font-size: 14px;height: 50px;line-height: 20px;padding: 15px;") %></li>
+            <li><%= link_to("Surat","#",:style => "float: left;font-size: 14px;height: 50px;line-height: 20px;padding: 15px;") %></li>
+          </ul>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if current_user.present? %>
@@ -68,7 +70,7 @@
               <% end %>
             </div>
           </li>
-          <li><%= link_to("Register", new_user_registration_path) %></li>
+          <li><%= link_to("Register", new_user_session_path) %></li>
         <% end %>
       </ul>
     </div>

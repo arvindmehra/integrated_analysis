@@ -1,71 +1,101 @@
 <div class="row">
-	<div class="col-lg-12">
-		<div class="box">
-			<div class="row">
+  <div class="col-lg-12">
+    <div class="box">
+      <div class="row">
         <div class="col-lg-12">
           <section class="panel" style="border: 1px solid #D9D9D9;">
             <div class="panel-body">
               <form aciton="/welcome/search" class="form form-horizontal" role="form">
-				        <div class="row">
-				        	<div class="col-sm-12">
-				        		<div class="col-sm-2">
-				            	<select name="search[to_do]" id="property_to_do" class="select optional"><option value="">All</option>
-												<option value="0">Rent</option>
-												<option value="1">Sale</option>
-												<option value="2">Purchase</option>
-											</select>
-										</div>
-						        <div class="col-sm-2"><input type="text" name="search[min_sqrt]" class="form-control" placeholder="Min sqrt"></div>
-						        <div class="col-sm-2"><input type="text" name="search[max_sqrt]" class="form-control" placeholder="Max sqrt"></div>
-						        <div class="col-sm-2"><input type="text" name="search[min_price]" class="form-control" placeholder="Min price"></div>
-						        <div class="col-sm-2"><input type="text" name="search[max_price]" class="form-control" placeholder="Max price"></div>
-										<div class="col-sm-1">
-					            <button type="submit" class="btn btn-success"><i class="icon-search"></i> Search</button>
-					          </div>
-					        </div>
-					      </div>
-			        </form>
-			        <h4><i class="icon-user"></i><span class="break"></s<pan><%= Property.all.size %> office spaces for rent </h4>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="col-sm-3">
+                      <div class="col-sm-7">
+                        <select name="search[city]" id="property_city" class="select optional">
+                          <option value="0">Gurgaon</option>
+                          <option value="1">Mumbai</option>
+                          <option value="2">Bangalore</option>
+                          <option value="3">Chennai</option>
+                          <option value="4">Hyderabad</option>
+                          <option value="5">Pune</option>
+                          <option value="6">Kolkata</option>
+                          <option value="7">Jaipur</option>
+                          <option value="8">Goa</option>
+                          <option value="9">Lucknow</option>
+                          <option value="10">Ahemdabad</option>
+                          <option value="11">Surat</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-5">
+                        <select name="search[to_do]" id="property_to_do" class="select optional"><option value="">All</option>
+                          <option value="0">Rent</option>
+                          <option value="1">Sale</option>
+                          <option value="2">Purchase</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="col-sm-6">
+                        <input type="text" name="search[min_sqrt]" class="form-control" placeholder="Min sqrt">
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="text" name="search[max_sqrt]" class="form-control" placeholder="Max sqrt">
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="col-sm-6">
+                        <input type="text" name="search[min_price]" class="form-control" placeholder="Min price">
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="text" name="search[max_price]" class="form-control" placeholder="Max price">
+                      </div>
+                    </div>
+                    <div class="col-sm-1">
+                      <button type="submit" class="btn btn-success"><i class="icon-search"></i> Search</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <h4><i class="icon-user"></i><span class="break"></s<pan><%= Property.all.size %> office spaces for rent </h4>
             </div>
           </section>
         </div>
       </div>
-			<div id="property-table" class="box-content">
-				<table class="table table-striped table-bordered bootstrap-datatable datatable">
-				  <thead>
-					  <tr>
-					  	<th>ID</th>
-						  <th>Photo</th>
-				      <th>Project</th>
-				      <th>Area</th>
-				      <th>City</th>
-				      <th>Posted</th>
-				      <th>Price<span class="text-muted"> (Rs)</span></th>
-				      <th>Size<span class="text-muted"> (sqrt)</span></th>
-				      <th>For sale/buy/rent</th>
-				      <th>Contact</th>
-					  </tr>
-				  </thead>
-				  <tbody>
-				    <% @properties.each do |property| %>
-				      <tr>
-				      	<td><%= property.id %></td>
-				        <td><img src="/photo10.jpg" style="height: 23px; width: 23px;"> x 3</td>
-				        <td><%= property.project %></td>
-				        <td><%= property.area %></td>
-				        <td><%= property.city %></td>
-				        <td><%= property.created_at.to_s(:short) %></td>
-				        <td><%= property.price %></td>
-				        <td><%= property.size %></td>
-				        <td><span class="label label-primary"><%= Property::TODO_TYPE.keys[property.to_do] if  property.to_do %></span></td>
-				        <td><%= property.contact %></td>
-				      </tr>
-				    <% end %>
-				  </tbody>
-			  </table>
-			  <%= will_paginate @properties, renderer: BootstrapPagination::Rails  unless params[:search].present? %>
-			</div>
-		</div>
-	</div><!--/col-->
+      <div id="property-table" class="box-content">
+        <table class="table table-striped table-bordered bootstrap-datatable datatable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Photo</th>
+              <th>Project</th>
+              <th>Area</th>
+              <th>City</th>
+              <th>Posted</th>
+              <th>Price<span class="text-muted"> (Rs)</span></th>
+              <th>Size<span class="text-muted"> (sqrt)</span></th>
+              <th>For sale/buy/rent</th>
+              <th>Contact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @properties.each do |property| %>
+              <tr>
+                <td><%= property.id %></td>
+                <td><img src="/photo10.jpg" style="height: 23px; width: 23px;"> x 3</td>
+                <td><%= property.project %></td>
+                <td><%= property.area %></td>
+                <td><%= property.city %></td>
+                <td><%= property.created_at.to_s(:short) %></td>
+                <td><%= property.price %></td>
+                <td><%= property.size %></td>
+                <td><span class="label label-primary"><%= Property::TODO_TYPE.keys[property.to_do] if  property.to_do %></span></td>
+                <td><%= property.contact %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= will_paginate @properties, renderer: BootstrapPagination::Rails  unless params[:search].present? %>
+      </div>
+    </div>
+  </div><!--/col-->
 
 </div><!--/row-->
