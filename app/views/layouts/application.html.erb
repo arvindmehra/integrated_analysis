@@ -53,8 +53,21 @@
             </ul>
           </li>
         <% else %>
-          <li><%= link_to("Login", new_user_session_path,  :style => "color: white;") %></li>
-          <li><%= link_to("Register", new_user_session_path, :style => "color: white;") %></li>
+          <li class="dropdown " id="menuLogin">
+            <%= link_to("Login", new_user_session_path, :class=> "dropdown-toggle ", :'data-toggle' => "dropdown") %>
+            <div class="dropdown-menu popup_login">
+              <%= simple_form_for(:user, url: user_session_path, :authenticity_token => true, :class=>"form-horizontal") do |f| %>
+                <h3>Sign In</h3>
+                  <%= f.input :email, required: false, placeholder: "email", label: false, autofocus: true, :class=>"input-large" %>
+                  <%= f.input :password, required: false,label: false, placeholder: "password", :class=>"input-large" %>
+                  <div class="clearfix"></div>
+                  <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+                  <div class="clearfix"></div>
+                  <%= f.button :submit, "Sign in", :class=>"btn btn-primary pull-right" %>
+              <% end %>
+            </div>
+          </li>
+          <li><%= link_to("Register", new_user_session_path) %></li>
         <% end %>
       </ul>
     </div>
