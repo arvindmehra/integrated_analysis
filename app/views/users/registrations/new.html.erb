@@ -4,11 +4,11 @@
   		<span class="loghead">Sign up</span><br>
   	</div>
 	  <div class="content">
-			<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+			<%= simple_form_for(:user, url: user_registration_path) do |f| %>
 			  <%= f.error_notification %>
-			    <%= f.input :email, autofocus: true,  :class=>"input email", placeholder: "email", label: false %>
-			    <%= f.input :password, :class=>"input password", placeholder: "password" %>
-			    <%= f.input :password_confirmation %>
+			    <%= f.input :email, autofocus: true, required: false, :class=>"input email", placeholder: "email", label: false %>
+			    <%= f.input :password, required: false, :class=>"input password", placeholder: "password", :label => false %>
+			    <%= f.input :password_confirmation,required: false, label: false%>
 		</div>
 		<div class="footer">
 		  <%= f.button :submit, "Sign up", :class=>"button"  %>
@@ -36,7 +36,7 @@
 }
 
 body {
- background: url(realestate-blurr2.png);
+ background: url(/realestate-blurr2.png);
  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
  font-weight:300;
  text-align: left;
@@ -46,9 +46,17 @@ body {
 
 #wrapper {
  /* Center wrapper perfectly */
- width: 300px;
+ width: 500px;
  height: 400px;
  margin: 120px auto;
+}
+
+.col-md-2 {
+	width: 150px;
+}
+
+.col-md-10 {
+	width: 300px;
 }
 
 /* Download Button (Demo Only) */
@@ -98,7 +106,6 @@ LOGIN FORM
 *******************/
 
 .login-form {
- width: 300px;
  margin: 0 auto;
  position: relative;
  
