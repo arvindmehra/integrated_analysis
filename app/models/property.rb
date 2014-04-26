@@ -6,7 +6,7 @@ class Property < ActiveRecord::Base
   TODO_TYPE = {
     "Rent" => "0",
     "Sale" => "1",
-    "Purchase" => "2"
+    "Original Booking" => "2"
   }
 
   PROFESSIONAL_TYPE = {
