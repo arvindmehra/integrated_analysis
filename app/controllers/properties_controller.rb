@@ -4,7 +4,7 @@ class PropertiesController < ApplicationController
   # GET /properties
   # GET /properties.json
   def index
-    @properties = current_user.properties 
+    @properties = current_user.properties
   end
 
   # GET /properties/1
@@ -42,7 +42,7 @@ class PropertiesController < ApplicationController
   def update
     respond_to do |format|
       if @property.update(property_params)
-        format.html { redirect_to @property, notice: 'Property was successfully updated.' }
+        format.html { redirect_to welcome_index_path, notice: 'Property was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -69,6 +69,6 @@ class PropertiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def property_params
-      params.require(:property).permit(:photo, :project, :area, :city, :posted_at, :price, :size, :to_do, :contact, :professional_type, :data_available, :amenities, :name, :company, :email, :phone)
+      params.require(:property).permit(:photo, :project, :area, :city, :posted_at, :price, :size, :to_do, :contact, :professional_type, :data_available, :amenities, :name, :company, :email, :phone, :price_text, :comment_title, :comments, :floor)
     end
 end
