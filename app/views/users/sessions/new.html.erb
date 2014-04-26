@@ -2,15 +2,13 @@
   <div class="login-form">
   	<div class="header">
   		<span class="loghead">Log in</span><br>
- 			<span>Please Login to be a part of the most exotic place for real estate on web.</span>
+ 			<span>Please Register here to be a part of the most exotic place for real estate on web.</span>
   	</div>
 	  <div class="content">
-			<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), :authenticity_token => true, :class=>"form-horizontal") do |f| %>
+			<%= simple_form_for(:user, url: user_session_path, :authenticity_token => true, :class=>"form-horizontal") do |f| %>
 		    <%= f.input :email, required: false, label: false, autofocus: true, :class=>"input email", placeholder: "email" %>
-  			<div class="user-icon"></div>
 		    <%= f.input :password, required: false, label: false, placeholder: "password", :class=>"input password" %>
-  				<div class="pass-icon"></div>  
-		    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+		    <%#= f.input :password_confirmation %>
 	  </div>  
 		  <div class="footer">
 		    <%= f.button :submit, "Sign in", :class=>"button" %>
@@ -40,7 +38,7 @@
 }
 
 body {
- background: url(realestate-blurr2.png);
+ background: url(/realestate-blurr2.png);
  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
  font-weight:300;
  text-align: left;
@@ -80,20 +78,6 @@ body {
 .download:focus {
  bottom: 24px;
 }
-
-/*
-.gradient {
- width: 600px;
- height: 600px;
- position: fixed;
- left: 50%;
- top: 50%;
- margin-left: -300px;
- margin-top: -300px;
- 
- background: url(http://www.demo.amitjakhu.com/login-form/images/gradient.png) no-repeat;
-}
-*/
 
 
 
