@@ -34,14 +34,29 @@ class Property < ActiveRecord::Base
     lc[:max_price] = []
     lc[:to_do] =[]
     scope = Property.all
+    if search && !search[:min_sqrt].blank?
+      scope = scope.select{|x| x.size >= search[:min_sqrt]}
+    end
+    if search && !search[:max_sqrt].blank?
+      scope = scope.select{|x| x.size <= search[:max_sqrt]}
+    end
     if search && !search[:min_sqrt].blank? && !search[:max_sqrt].blank?
       scope = scope.select{|x| x.size >= search[:min_sqrt] && x.size <= search[:max_sqrt]}
+    end
+    if search && !search[:min_price].blank?
+      scope = scope.select{|x| x.size >= search[:min_price]}
+    end
+    if search && !search[:max_price].blank?
+      scope = scope.select{|x| x.size <= search[:max_price]}
     end
     if search && !search[:min_price].blank? && !search[:max_price].blank?
     	scope = scope.select{|x| x.size >= search[:min_price] && x.size <= search[:max_price]}
     end
     if search && !search[:to_do].blank?
-      scope = scope.select{|x| x.to_do == search[:to_do]}
+      scope = scope.select{|x| x.to_do == search[:to_do].to_i}
+    end
+    if search && !search[:city].blank?
+      scope = scope.select{|x| x.city == search[:city]}
     end
     scope
   end
