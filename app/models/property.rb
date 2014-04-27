@@ -24,6 +24,21 @@ class Property < ActiveRecord::Base
     "per month (if rent)" => "2"
   }
 
+  CITIES = {
+    "Gurgaon" => "Gurgaon",
+    "Mumbai" => "Mumbai",
+    "Bangalore" => "Bangalore",
+    "Chennai" => "Chennai",
+    "Hyderabad" => "Hyderabad",
+    "Pune" => "Pune",
+    "Kolkata" => "Kolkata",
+    "Jaipur" => "Jaipur",
+    "Goa" => "Goa",
+    "Lucknow" => "Lucknow",
+    "Ahemdabad" => "Ahemdabad",
+    "Surat" => "Surat"
+  }
+
   self.per_page = 10
 
   def self.search_data(search)
@@ -34,23 +49,19 @@ class Property < ActiveRecord::Base
     lc[:max_price] = []
     lc[:to_do] =[]
     scope = Property.all
-    if search && !search[:min_sqrt].blank?
-      scope = scope.select{|x| x.size >= search[:min_sqrt]}
-    end
-    if search && !search[:max_sqrt].blank?
-      scope = scope.select{|x| x.size <= search[:max_sqrt]}
-    end
     if search && !search[:min_sqrt].blank? && !search[:max_sqrt].blank?
       scope = scope.select{|x| x.size >= search[:min_sqrt] && x.size <= search[:max_sqrt]}
-    end
-    if search && !search[:min_price].blank?
-      scope = scope.select{|x| x.size >= search[:min_price]}
-    end
-    if search && !search[:max_price].blank?
-      scope = scope.select{|x| x.size <= search[:max_price]}
+    elsif search && !search[:min_sqrt].blank?
+      scope = scope.select{|x| x.size >= search[:min_sqrt]}
+    elsif search && !search[:max_sqrt].blank?
+      scope = scope.select{|x| x.size <= search[:max_sqrt]}
     end
     if search && !search[:min_price].blank? && !search[:max_price].blank?
     	scope = scope.select{|x| x.size >= search[:min_price] && x.size <= search[:max_price]}
+    elsif search && !search[:min_price].blank?
+      scope = scope.select{|x| x.size >= search[:min_price]}
+    elsif search && !search[:max_price].blank?
+      scope = scope.select{|x| x.size <= search[:max_price]}
     end
     if search && !search[:to_do].blank?
       scope = scope.select{|x| x.to_do == search[:to_do].to_i}

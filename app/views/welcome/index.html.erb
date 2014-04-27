@@ -5,48 +5,31 @@
         <div class="col-lg-12">
           <section class="panel" style="border: 1px solid #D9D9D9;">
             <div class="panel-body">
-              <form aciton="/welcome/index" class="form form-horizontal" role="form">
+              <%= form_tag(welcome_index_path(params[:search]), :method => :post, :class => "form form-horizontal") do %>
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="col-sm-3">
-                      <div class="col-sm-7">
-                        <select name="search[city]" id="property_city" class="select optional">
-                          <option value="Gurgaon">Gurgaon</option>
-                          <option value="Mumbai">Mumbai</option>
-                          <option value="Bangalore">Bangalore</option>
-                          <option value="Chennai">Chennai</option>
-                          <option value="Hyderabad">Hyderabad</option>
-                          <option value="Pune">Pune</option>
-                          <option value="Kolkata">Kolkata</option>
-                          <option value="Jaipur">Jaipur</option>
-                          <option value="Goa">Goa</option>
-                          <option value="Lucknow">Lucknow</option>
-                          <option value="Ahemdabad">Ahemdabad</option>
-                          <option value="Surat">Surat</option>
-                        </select>
+                      <div class="col-sm-6">
+                        <%= select_tag "search[city]",options_for_select(Property::CITIES,(params[:search] && params[:search][:city])), :class => "area-width" %>
                       </div>
-                      <div class="col-sm-5">
-                        <select name="search[to_do]" id="property_to_do" class="select optional"><option value="">All</option>
-                          <option value="0">Rent</option>
-                          <option value="1">Sale</option>
-                          <option value="2">Purchase</option>
-                        </select>
+                      <div class="col-sm-6">
+                        <%= select_tag "search[to_do]",options_for_select(Property::TODO_TYPE,(params[:search] && params[:search][:to_do])), :class => "area-width" %>
                       </div>
                     </div>
                     <div class="col-sm-3">
                       <div class="col-sm-6">
-                        <input type="text" name="search[min_sqrt]" class="form-control" placeholder="Min sqrt">
+                        <%= text_field_tag("search[min_sqrt]", (params[:search] && params[:search][:min_sqrt]), :class => "form-control", :placeholder=> "Min sqrt") %>
                       </div>
                       <div class="col-sm-6">
-                        <input type="text" name="search[max_sqrt]" class="form-control" placeholder="Max sqrt">
+                        <%= text_field_tag("search[max_sqrt]", (params[:search] && params[:search][:max_sqrt]), :class => "form-control", :placeholder=> "Max sqrt") %>
                       </div>
                     </div>
                     <div class="col-sm-3">
                       <div class="col-sm-6">
-                        <input type="text" name="search[min_price]" class="form-control" placeholder="Min price">
+                        <%= text_field_tag("search[min_price]", (params[:search] && params[:search][:min_price]), :class => "form-control", :placeholder=> "Min price") %>
                       </div>
                       <div class="col-sm-6">
-                        <input type="text" name="search[max_price]" class="form-control" placeholder="Max price">
+                        <%= text_field_tag("search[max_price]", (params[:search] && params[:search][:max_price]), :class => "form-control", :placeholder=> "Max price") %>
                       </div>
                     </div>
                     <div class="col-sm-1">
@@ -54,7 +37,7 @@
                     </div>
                   </div>
                 </div>
-              </form>
+              <% end %>
               <h4><i class="icon-user"></i><span class="break"></s<pan><%= Property.all.size %> office spaces for rent </h4>
             </div>
           </section>
