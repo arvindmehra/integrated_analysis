@@ -50,18 +50,18 @@ class Property < ActiveRecord::Base
     lc[:to_do] =[]
     scope = Property.all
     if search && !search[:min_sqrt].blank? && !search[:max_sqrt].blank?
-      scope = scope.select{|x| x.size >= search[:min_sqrt] && x.size <= search[:max_sqrt]}
-    elsif search && !search[:min_sqrt].blank?
-      scope = scope.select{|x| x.size >= search[:min_sqrt]}
-    elsif search && !search[:max_sqrt].blank?
-      scope = scope.select{|x| x.size <= search[:max_sqrt]}
+      scope = scope.select{|x| x.size.to_f >= search[:min_sqrt].to_f && x.size.to_f <= search[:max_sqrt].to_f}
+    elsif search && !search[:min_sqrt].blank? && search[:max_sqrt].blank?
+      scope = scope.select{|x| x.size.to_f >= search[:min_sqrt].to_f}
+    elsif search && !search[:max_sqrt].blank? && search[:min_sqrt].blank?
+      scope = scope.select{|x| x.size.to_f <= search[:max_sqrt].to_f}
     end
     if search && !search[:min_price].blank? && !search[:max_price].blank?
-    	scope = scope.select{|x| x.size >= search[:min_price] && x.size <= search[:max_price]}
-    elsif search && !search[:min_price].blank?
-      scope = scope.select{|x| x.size >= search[:min_price]}
-    elsif search && !search[:max_price].blank?
-      scope = scope.select{|x| x.size <= search[:max_price]}
+    	scope = scope.select{|x| x.size.to_f >= search[:min_price].to_f && x.size.to_f <= search[:max_price].to_f}
+    elsif search && !search[:min_price].blank? && search[:max_price].blank?
+      scope = scope.select{|x| x.size.to_f >= search[:min_price].to_f}
+    elsif search && search[:min_price].blank? && !search[:max_price].blank?
+      scope = scope.select{|x| x.size.to_f <= search[:max_price].to_f}
     end
     if search && !search[:to_do].blank?
       scope = scope.select{|x| x.to_do == search[:to_do].to_i}
