@@ -63,7 +63,7 @@
             <% @properties.each do |property| %>
               <tr>
                 <td><%= property.id %></td>
-                <td><img src="/photo10.jpg" style="height: 23px; width: 23px;"> x 3</td>
+                <td><img src="<%= property.image %>" style="height: 23px; width: 23px;"> x 3</td>
                 <td><%= link_to(property.project, edit_property_path(property.id)) %></td>
                 <td><%= property.area %></td>
                 <td><%= property.city %></td>
