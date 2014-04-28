@@ -14,6 +14,7 @@ gem "simple_form"
 gem 'paperclip'
 gem 'devise'
 gem 'omniauth'
+gem 'carrierwave'
 
 # Facebook Integration for posting feedbacks
 gem 'omniauth-facebook'
