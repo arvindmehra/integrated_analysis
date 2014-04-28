@@ -56,7 +56,6 @@ ActiveRecord::Schema.define(version: 20140427155702) do
     t.integer  "user_id"
     t.integer  "price_text"
     t.string   "comment_title"
-    t.string   "image"
   end
 
   create_table "users", force: true do |t|

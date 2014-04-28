@@ -37,6 +37,9 @@ GEM
     byebug (2.7.0)
       columnize (~> 0.3)
       debugger-linecache (~> 1.2)
+    carrierwave (0.6.2)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
     chosen-rails (1.1.0)
       coffee-rails (>= 3.2)
       compass-rails (>= 1.1.2)
@@ -226,6 +229,7 @@ DEPENDENCIES
   bootstrap-datepicker-rails
   bootstrap-sass
   byebug
+  carrierwave
   chosen-rails
   coffee-rails (~> 4.0.0)
   devise
