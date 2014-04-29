@@ -9,9 +9,33 @@ class Property < ActiveRecord::Base
   TODO_TYPE = {
     "Rent" => "0",
     "Sale" => "1",
-    "Original Booking" => "2"
+    "Original Booking" => "2",
+    "Multistorey Apartment"  => "3",
+    "Builder Floor Apartment" => "4",
+    "Residential House" => "5",
+    "Villa" => "6",
+    "Residential Plot" => "7",
+    "Penthouse" => "8",
+    "Studio Apartment" => "9",
+    "Service Apartment" => "10",
+    "Holiday Home" => "11",
+    "Commercial Office Space" => "12",
+    "Office in IT Park/ SEZ" => "13",
+    "Commercial Shop" => "14",
+    "Space in Shopping Mall" => "15",
+    "Commercial Showroom" => "16",
+    "Kiosk" => "17",
+    "Business Centre" => "18",
+    "Commercial Land" => "19",
+    "Warehouse/ Godown" => "20",
+    "Guest House" => "21",
+    "Hotel" => "22",
+    "Hotel Sites" => "23",
+    "Industrial Land" => "24",
+    "Industrial Building" => "25",
+    "Industrial Shed" => "26"
   }
-
+  
   PROFESSIONAL_TYPE = {
     "Ready to move" => "0",
     "Under Construction" => "1",
