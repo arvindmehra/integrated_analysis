@@ -8,34 +8,36 @@ class Property < ActiveRecord::Base
 
   TODO_TYPE = {
     "Rent" => "0",
-    "Sale" => "1",
-    "Original Booking" => "2",
-    "Multistorey Apartment"  => "3",
-    "Builder Floor Apartment" => "4",
-    "Residential House" => "5",
-    "Villa" => "6",
-    "Residential Plot" => "7",
-    "Penthouse" => "8",
-    "Studio Apartment" => "9",
-    "Service Apartment" => "10",
-    "Holiday Home" => "11",
-    "Commercial Office Space" => "12",
-    "Office in IT Park/ SEZ" => "13",
-    "Commercial Shop" => "14",
-    "Space in Shopping Mall" => "15",
-    "Commercial Showroom" => "16",
-    "Kiosk" => "17",
-    "Business Centre" => "18",
-    "Commercial Land" => "19",
-    "Warehouse/ Godown" => "20",
-    "Guest House" => "21",
-    "Hotel" => "22",
-    "Hotel Sites" => "23",
-    "Industrial Land" => "24",
-    "Industrial Building" => "25",
-    "Industrial Shed" => "26"
+    "Sale" => "1"
   }
-  
+  PROPERTY_TYPE = {
+    "Original Booking" => "0",
+    "Multistorey Apartment"  => "1",
+    "Builder Floor Apartment" => "2",
+    "Residential House" => "3",
+    "Villa" => "4",
+    "Residential Plot" => "5",
+    "Penthouse" => "6",
+    "Studio Apartment" => "7",
+    "Service Apartment" => "8",
+    "Holiday Home" => "9",
+    "Commercial Office Space" => "10",
+    "Office in IT Park/ SEZ" => "11",
+    "Commercial Shop" => "12",
+    "Space in Shopping Mall" => "13",
+    "Commercial Showroom" => "14",
+    "Kiosk" => "15",
+    "Business Centre" => "16",
+    "Commercial Land" => "17",
+    "Warehouse/ Godown" => "18",
+    "Guest House" => "19",
+    "Hotel" => "20",
+    "Hotel Sites" => "21",
+    "Industrial Land" => "22",
+    "Industrial Building" => "23",
+    "Industrial Shed" => "24"
+  }
+
   PROFESSIONAL_TYPE = {
     "Ready to move" => "0",
     "Under Construction" => "1",

@@ -8,23 +8,16 @@
               <%= form_tag(welcome_index_path(params[:search]), :method => :post, :class => "form form-horizontal") do %>
                 <div class="row">
                   <div class="col-sm-12">
-                    <div class="col-sm-3">
-                      <div class="col-sm-6">
-                        <%= select_tag "search[city]",options_for_select(Property::CITIES,(params[:search] && params[:search][:city])), :class => "area-width" %>
-                      </div>
-                      <div class="col-sm-6">
-                        <%= select_tag "search[to_do]",options_for_select(Property::TODO_TYPE,(params[:search] && params[:search][:to_do])), :class => "area-width" %>
-                      </div>
+                    <div class="col-sm-2">
+                      <%= select_tag "search[city]",options_for_select(Property::CITIES,(params[:search] && params[:search][:city])), :class => "area-width" %>
+                    </div>
+                    <div class="col-sm-2">
+                      <%= select_tag "search[to_do]",options_for_select(Property::TODO_TYPE,(params[:search] && params[:search][:to_do])), :class => "area-width" %>
                     </div>
                     <div class="col-sm-3">
-                      <div class="col-sm-6">
-                        <%= text_field_tag("search[min_sqrt]", (params[:search] && params[:search][:min_sqrt]), :class => "form-control", :placeholder=> "Min sqrt") %>
-                      </div>
-                      <div class="col-sm-6">
-                        <%= text_field_tag("search[max_sqrt]", (params[:search] && params[:search][:max_sqrt]), :class => "form-control", :placeholder=> "Max sqrt") %>
-                      </div>
+                      <%= select_tag "search[property_type]",options_for_select(Property::PROPERTY_TYPE,(params[:search] && params[:search][:property_type])), :class => "area-width" %>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                       <div class="col-sm-6">
                         <%= text_field_tag("search[min_price]", (params[:search] && params[:search][:min_price]), :class => "form-control", :placeholder=> "Min price") %>
                       </div>
