@@ -29,3 +29,12 @@ $brand-color: pink;
   background-color: #000000 !important;
   color: #0088CC !important;
 }
+
+abbr[title] {
+  color: red;
+  border: none;
+}
+
+#error_explanation {
+  color: #a94442;
+}

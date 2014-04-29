@@ -4,6 +4,8 @@ class Property < ActiveRecord::Base
   scope :size_between,lambda {|from,to| {:conditions => ["Property.size between ? and ?",from,to]}}
   scope :price_between,lambda {|from,to| {:conditions => ["price between ? and ?",from,to]}}
   mount_uploader :image, ImageUploader
+  validates :project,:city, :area, :size, :contact, :price, :presence => true
+
   TODO_TYPE = {
     "Rent" => "0",
     "Sale" => "1",

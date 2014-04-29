@@ -51,7 +51,7 @@ SimpleForm.setup do |config|
   config.wrappers :append, :tag => 'div', :class => "wrapper", :error_class => :field_with_errors do |b|
     b.use :html5
     b.use :placeholder
-    b.wrapper tag: :label, :class => 'col-md-2 control-label' do |labelclass|
+    b.wrapper tag: :label, :class => 'col-md-3 control-label' do |labelclass|
       labelclass.use :label_text
     end
     b.wrapper :tag => 'div', :class => 'col-md-5' do |input|
@@ -65,10 +65,10 @@ SimpleForm.setup do |config|
     # Form extensions
     b.use :html5
     b.use :placeholder
-    b.wrapper tag: :label, :class => 'col-md-2 control-label' do |labelclass|
+    b.wrapper tag: :label, :class => 'col-md-3 control-label' do |labelclass|
       labelclass.use :label_text
     end
-    b.wrapper :tag => 'div', :class => 'col-md-10' do |ba|
+    b.wrapper :tag => 'div', :class => 'col-md-9' do |ba|
       ba.use :input
       ba.use :hint, wrap_with: { tag: :span, class: "help-block" }
       ba.use :error, wrap_with: { tag: :span, class: "help-block text-danger" }
@@ -89,10 +89,10 @@ SimpleForm.setup do |config|
     # Form extensions
     b.use :html5
     b.use :placeholder
-    b.wrapper tag: :label, :class => 'col-md-2 control-label' do |labelclass|
+    b.wrapper tag: :label, :class => 'col-md-3 control-label' do |labelclass|
       labelclass.use :label_text
     end
-    b.wrapper :tag => 'div', :class => 'col-md-10' do |ba|
+    b.wrapper :tag => 'div', :class => 'col-md-9' do |ba|
       ba.use :input
       ba.use :hint, wrap_with: { tag: :span, class: "help-block" }
       ba.use :error, wrap_with: { tag: :span, class: "help-block text-danger" }
@@ -159,7 +159,7 @@ SimpleForm.setup do |config|
   # config.label_text = lambda { |label, required| "#{required} #{label}" }
 
   # You can define the class to use on all labels. Default is nil.
-  config.label_class = 'control-label col-md-2'
+  config.label_class = 'control-label col-md-3'
 
   # You can define the class to use on all forms. Default is simple_form.
   config.form_class = "form form-horizontal"
