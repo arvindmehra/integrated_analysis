@@ -1,49 +1,59 @@
-<p id="notice"><%= notice %></p>
+<body class="loading">
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h3><%= "#{@property.project} for #{Property::TODO_TYPE.keys[@property.to_do]} at #{@property.area} "%></h3>
+      <div class="col-md-6"><img src="/images/yes.jpg"></div>
+      <div class="col-md-6">
+        <strong><%=@property.price %></strong>,<strong><%=@property.size %></strong><br>
+        <table class="table">
+          <tr>
+            <td>Type of Property</td>
+            <td>Apartment</td>
+          </tr>
+          <tr>
+            <td>Project Name</td>
+            <td><%=@property.project%></td>
+          </tr>
+          <tr>
+            <td>Locality</td>
+            <td><%=@property.area%></td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td><%=@property.city%></td>
+          </tr>
+          <tr>
+            <td>Type</td>
+            <td><span class="label label-primary"><%= Property::TODO_TYPE.keys[@property.to_do] if  @property.to_do %></span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-4">
+  colmd8
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Photo:</strong>
-  <%= @property.photo %>
-</p>
 
-<p>
-  <strong>Project:</strong>
-  <%= @property.project %>
-</p>
 
-<p>
-  <strong>Area:</strong>
-  <%= @property.area %>
-</p>
 
-<p>
-  <strong>City:</strong>
-  <%= @property.city %>
-</p>
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
-<p>
-  <strong>Posted at:</strong>
-  <%= @property.posted_at %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @property.price %>
-</p>
-
-<p>
-  <strong>Size:</strong>
-  <%= @property.size %>
-</p>
-
-<p>
-  <strong>To do:</strong>
-  <%= @property.to_do %>
-</p>
-
-<p>
-  <strong>Contact:</strong>
-  <%= @property.contact %>
-</p>
-
-<%= link_to 'Edit', edit_property_path(@property) %> |
-<%= link_to 'Back', properties_path %>
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        controlNav: "thumbnails",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+</body>
