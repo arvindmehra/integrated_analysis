@@ -1,59 +1,98 @@
-<body class="loading">
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
-      <h3><%= "#{@property.project} for #{Property::TODO_TYPE.keys[@property.to_do]} at #{@property.area} "%></h3>
+    <div class="col-md-12" style="margin-left:20px"><h3><%= "#{@property.project} for #{Property::TODO_TYPE.keys[@property.to_do]} at #{@property.area} "%></h3>
+      <span><h4>Sector-5, Rambagh</h4></span>
+    </div>
+    <div class="col-md-8" style="padding-top:15px; border-top: 1px solid #428bca;">
       <div class="col-md-6"><img src="/images/yes.jpg"></div>
       <div class="col-md-6">
-        <strong><%=@property.price %></strong>,<strong><%=@property.size %></strong><br>
+        <span class="col-md-4"><h4 style="margin-bottom:0px">3BHK</h4><small class="type-info">For Sale</small></span>
+        <span class="col-md-4"><h4 style="margin-bottom:0px"><%="#{@property.price} Lacs" %></h4>
+          <small class="type-info">Negotiable</small>
+        </span>
+        <span class="col-md-4"><h4 style="margin-bottom:0px"><%=@property.size %></h4>
+          <small class="type-info">Sq. Ft</small>
+        </span>
         <table class="table">
           <tr>
-            <td>Type of Property</td>
+            <td><strong>Type of Property</strong></td>
             <td>Apartment</td>
           </tr>
           <tr>
-            <td>Project Name</td>
+            <td><strong>Project Name</strong></td>
             <td><%=@property.project%></td>
           </tr>
           <tr>
-            <td>Locality</td>
+            <td><strong>Locality</strong></td>
             <td><%=@property.area%></td>
           </tr>
           <tr>
-            <td>City</td>
+            <td><strong>City</strong></td>
             <td><%=@property.city%></td>
           </tr>
           <tr>
-            <td>Type</td>
+            <td><strong>Type</strong></td>
             <td><span class="label label-primary"><%= Property::TODO_TYPE.keys[@property.to_do] if  @property.to_do %></span></td>
+          </tr>
+          <tr>
+            <td><strong>Flooring</strong></td>
+            <td>Wooden</td>
+          </tr>
+          <tr>
+            <td><strong>Carpet Area</strong></td>
+            <td>1900 Sq.ft</td>
           </tr>
         </table>
       </div>
+      <div class="col-md-12">
+        <div class="well well-lg">
+          Property Posted By:- <strong>Amit Surolia</strong>&nbsp<em>(owner)</em>
+          <span class="pull-right btn btn-warning">View Contact</span>
+        </div>
+        <h4>Location Details</h4>
+        <div class="col-md-6">
+          <table class="table">
+            <tr>
+              <td style="border:none"><strong>Address</strong></td>
+              <td style="border:none">Janta Colony, Near Ghat Gate</td>
+            </tr>
+            <tr>
+              <td style="border:none"><strong>City</strong></td>
+              <td style="border:none"><%=@property.city%></td>
+            </tr>
+            <tr>
+          </table>
+        </div>  
+      </div>
     </div>
+
     <div class="col-md-4">
-  colmd8
+      <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 style="margin-top:0px;">Intrested?</h3><h3 class="panel-title">Get in Touch with the owner</h3>
+      </div>
+      <div class="panel-body">
+
+        <%= form_tag(send_query_properties_path, {:method => :get, :class => "form form-horizontal"}) do %>
+          <div class="form-group">
+            <div class="col-md-10"><%= text_field_tag "email", params[:email], :class => "form-control", :placeholder => "Email" %></div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-10"><%= text_field_tag "name", params[:name], :class => "form-control", :placeholder => "Name" %></div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-10"><%= text_field_tag "phone", params[:phone], :placeholder => "Mobile No.", :class => "form-control datetime" %></div>
+          </div>
+          <div class="form-actions form-actions-padding-sm">
+            <div class="row">
+              <div class="col-md-9 col-md-offset-3">
+                <%= submit_tag "Send Message",id: "do_migration", :class => "pull-left btn btn-warning" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+      </div>
     </div>
   </div>
 </div>
-
-
-
-
-  <!-- jQuery -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-
-  <script type="text/javascript">
-    $(function(){
-      SyntaxHighlighter.all();
-    });
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        controlNav: "thumbnails",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
-  </script>
-</body>

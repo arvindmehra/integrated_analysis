@@ -18,6 +18,9 @@ class PropertiesController < ApplicationController
     @property = Property.new
   end
 
+  def send_query
+  end
+
   # GET /properties/1/edit
   def edit
   end
