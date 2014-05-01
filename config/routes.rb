@@ -9,7 +9,11 @@ IntegratedAnalysis::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
   post "welcome/search"
-  resources :properties
+  resources :properties do
+    collection do
+      get "send_query"
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
