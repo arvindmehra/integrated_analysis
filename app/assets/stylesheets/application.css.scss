@@ -38,3 +38,18 @@ abbr[title] {
 #error_explanation {
   color: #a94442;
 }
+
+.action-buttons {
+  margin-left: -10px; 
+  padding-right: 10px ;
+}
+
+.bs-callout-warning {
+background-color: #fcf8f2;
+border-color: #f0ad4e;
+}
+.bs-callout {
+margin: 20px 0;
+padding: 20px;
+border-left: 3px solid #f0ad4e;
+}
