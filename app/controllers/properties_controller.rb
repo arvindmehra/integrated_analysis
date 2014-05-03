@@ -36,6 +36,10 @@ class PropertiesController < ApplicationController
   def send_query
   end
 
+  def get_in_touch
+    
+  end
+
   # GET /properties/1/edit
   def edit
   end

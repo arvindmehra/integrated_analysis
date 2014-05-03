@@ -12,6 +12,7 @@ IntegratedAnalysis::Application.routes.draw do
   resources :properties do
     collection do
       get "send_query"
+      get "get_in_touch"
     end
   end
 

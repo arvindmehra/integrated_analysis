@@ -27,7 +27,7 @@
         <% @properties.each do |property| %>
           <div class="bs-callout bs-callout-warning col-md-12">
             <div class="col-md-4">
-              <%= image_tag("/images/yes.jpg", size: "250x150") %>
+              <%= link_to(image_tag("/images/yes.jpg", size: "250x150"), property_path(property.id)) %>
             </div>
             <div class="col-md-4" >
               <h4><%= link_to(property.project, property_path(property.id)) %></h4>
@@ -48,7 +48,7 @@
             <div class="col-md-12" id="accordion">
               <div id=<%="#{property.id}"%> class="panel-collapse collapse">
               <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <%= render 'get_in_touch' %>
               </div>
             </div>
             </div>  
